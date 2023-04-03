@@ -1,12 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import ChampionList from './Components/ChampionList/ChampionList';
+import Header from './Components/Header/Header';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>CapStone Homepage</h1>
-      </header>
+    <div>
+      <Header />
+        <Routes>
+          <Route path="/" element={<ChampionList />} />
+          {/* Add other routes here */}
+        </Routes>
     </div>
   );
 }

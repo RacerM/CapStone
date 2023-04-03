@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    &__left{
+        width: 40%;
+        background-color: blue;
+        padding: 1rem;
+    }
+    &__right{
+        width: 40%;
+        background-color: red;
+        text-align: end;
+        padding: 1rem;
+    }
+}
