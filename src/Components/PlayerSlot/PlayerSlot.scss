@@ -1,0 +1,14 @@
+.player-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding-top: 3rem;
+}
+
+.player-slot__icon {
+    width: 64px;
+    height: 64px;
+    background-color: grey;
+    border-radius: 5px;
+}

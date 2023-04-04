@@ -1,11 +1,7 @@
 import './ChampionList.scss';
-import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const ChampionList = () => {
-  const [champions, setChampions] = useState(null);
-  const [version, setVersion] = useState('');
-  const [loading, setLoading] = useState(true);
+const ChampionList = ({ champions, version, loading, onBanChampion, currentSide }) => {
 
   const fetchChampionData = async () => {
     try {
@@ -19,48 +15,38 @@ const ChampionList = () => {
     }
   };
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const { version, data } = await fetchChampionData();
-        if (data) {
-          setChampions(Object.values(data));
-          setVersion(version);
-        }
-      } catch (error) {
-        console.error('Failed to fetch champion data:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
+    const handleChampionClick = (champion) => {
+    // Call the onBanChampion function from the parent component
+    onBanChampion(currentSide, champion);
+  };
 
   return (
     <div className='champion'>
-      <div className="champion__list">
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
-          <ul>
-            <div className='champion__flex'>
-            {champions &&
-              champions.map((champion) => {
-                return (
-                  <li className="champion__item" key={champion.key}>
-                    <img
-                      className="champion__sprite"
-                      src={`http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${champion.image.full}`}
-                      alt={champion.name}
-                    />
-                    {champion.name}
-                  </li>
-                );
-              })}
-            </div>
-          </ul>
-        )}
+      <div className='champion__container'>
+        <div className="champion__list">
+          {loading ? (
+            <p>Loading...</p>
+          ) : (
+            <ul>
+              <div className='champion__flex'>
+              {champions &&
+                champions.map((champion) => {
+                  return (
+                    <li className="champion__item" key={champion.key}>
+                      <img
+                        className="champion__sprite"
+                        src={`http://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${champion.image.full}`}
+                        alt={champion.name}
+                        onClick={() => handleChampionClick(champion)}
+                      />
+                      {champion.name}
+                    </li>
+                  );
+                })}
+              </div>
+            </ul>
+          )}
+        </div>
       </div>
     </div>
   );
