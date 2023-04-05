@@ -1,5 +1,8 @@
 .champion{
-    padding-top: 7rem;
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top: 31%;
     &__container{
         display: flex;
         justify-content: center;
@@ -40,4 +43,8 @@
         flex-wrap: wrap;
         width: 100%;
     }
+}
+
+.champion__item--banned img {
+    filter: grayscale(100%);
 }

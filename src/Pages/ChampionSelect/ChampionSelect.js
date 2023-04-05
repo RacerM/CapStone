@@ -88,7 +88,7 @@ const ChampionSelect = () => {
           ))}
       </div>
       </div>
-      <button onClick={toggleSide}>
+      <button onClick={toggleSide} className='toggle-button'>
         Toggle Side: {currentSide === "blueSide" ? "Blue" : "Red"}
       </button>
         <ChampionList
@@ -97,6 +97,7 @@ const ChampionSelect = () => {
         loading={loading}
         onBanChampion={handleBanChampion}
         currentSide={currentSide}
+        bannedChampions={bannedChampions}
         />
       <div className="team-section right-section">
       <div className="ban-slots">

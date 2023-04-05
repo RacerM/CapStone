@@ -39,3 +39,12 @@
     display: flex;
     justify-content: center;
 }
+
+.toggle-button{
+    height: 2rem;
+    margin-top: 4rem;
+}
+
+.red-side .ban-slots {
+    flex-direction: row-reverse;
+}
