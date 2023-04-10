@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin: 5px;
-    padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 
 .player-slot__icon {
@@ -11,4 +12,16 @@
     height: 64px;
     background-color: grey;
     border-radius: 5px;
+}
+
+.player-number{
+    color: #FFF;
+}
+
+.placeholder {
+     width: 60px;
+     height: 60px;
+     background-color: #ccc;
+     border: 1px solid #999;
+     border-radius: 4px;
 }

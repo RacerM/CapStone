@@ -11,6 +11,12 @@
     align-items: center;
 }
 
+.player-slots-title{
+    color: #FFF;
+    padding-top: 1rem;
+    margin: 0;
+}
+
 .left-slots {
     margin-left: 20rem;
     margin-right: 10rem;
@@ -43,6 +49,14 @@
 .toggle-button{
     height: 2rem;
     margin-top: 4rem;
+}
+
+.blue-side {
+    background-color: #456990;
+}
+
+.red-side {
+    background-color: #6B2737;
 }
 
 .red-side .ban-slots {
