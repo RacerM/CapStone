@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    &__left{
+        width: 40%;
+        background-color: #456990;
+        padding: 1rem;
+        border-bottom-right-radius: 15px;
+    }
+    &__right{
+        width: 40%;
+        background-color: #6B2737;
+        text-align: end;
+        padding: 1rem;
+        border-bottom-left-radius: 15px;
+    }
+}

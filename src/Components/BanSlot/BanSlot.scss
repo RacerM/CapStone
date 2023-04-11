@@ -1,0 +1,63 @@
+.slot {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #eee;
+    margin-bottom: 10px;
+    margin-right: 4rem;
+    margin-top: 1rem;
+    margin: 1rem 4rem 1rem 1rem;
+}
+
+.ban-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+p{
+    color: #FFF;
+    padding-left: 1.25rem;
+}
+
+.slot.red-side {
+    direction: rtl;
+}
+
+.ban-slot {
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    overflow: hidden;
+
+    &.blue {
+        border: 2px solid #00a0f8;
+    }
+
+    &.red {
+        border: 2px solid #ff4d4d;
+    }
+
+    .champion-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .banned-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        color: rgba(255, 0, 0, 0.7);
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+        background-color: transparent;
+    }
+}
