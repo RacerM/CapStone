@@ -14,7 +14,7 @@ Installation and Setup
 Node.js (v14.x or later) and npm (v6.x or later) installed on your system.
 
 1. Clone the repository to your local machine:
-   "git clone https://github.com/your-username/league-of-legends-champion-select.git"
+   "git clone https://github.com/RacerM/CapStone"
 
 2. Navigate to the project directory:
    "cd league-of-legends-champion-select"
@@ -25,6 +25,9 @@ Node.js (v14.x or later) and npm (v6.x or later) installed on your system.
 4. Run the development server:
    "npm start"
 
-Open your browser and navigate to http://localhost:3000 to view the application.
+5. Open your browser and navigate to http://localhost:3000 to view the application.
 
-Technologies Used - React - SCSS - League of Legends Data Dragon API
+Technologies Used 
+  - React 
+  - SCSS 
+  - League of Legends Data Dragon API
